@@ -1,0 +1,37 @@
+#a function returns true if input is a palindrome or false if it is not
+
+#go through each item in list checking first with the last item and then moving inwards from both sides
+#each time palindrome remains true, increase count by 1
+#if palindrome rules fail, set count to 0, break the loop, and return False
+
+'''
+1. What is the name of the function? 
+
+2. What is the name of the parameter? 
+
+3. What is the name of the argument used in the function?
+
+4. Does the argument cause 2 different blocks of code to run? Explain.
+
+5. Is there iteration and selection in the function?
+
+6. Where do I add data to my list?
+
+7. How do I use my list?
+'''
+
+def palindrome(a):
+  list_conversion = [x for x in str(a)]
+  count = 0
+  for i in range(len(list_conversion)):
+    if list_conversion[i] == list_conversion[-i-1]:
+      count += 1
+    else:
+      count = 0
+      break
+  if count > 0:
+    print(True)
+  else:
+    print(False)
+  
+palindrome('tacocat')
